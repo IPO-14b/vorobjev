@@ -35,3 +35,7 @@ grunt web
 ```
 
 Все скомпилированные файлы помещаются в каталог build
+
+## Licensing disclaimer ##
+
+Кодовая база основана на проекте https://github.com/lepture/editor
