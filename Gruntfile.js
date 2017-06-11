@@ -70,8 +70,8 @@ module.exports = function(grunt) {
       grunt.file.copy(fpath, path.join('build', 'fonts', fname));
     });
     var data = grunt.file.read('vendor/icomoon/style.css');
-    data += grunt.file.read('paper.css');
-    data += grunt.file.read('editor.css');
+    data += grunt.file.read('less/paper.css');
+    data += grunt.file.read('less/editor.css');
     grunt.file.write('build/editor.css', data);
     grunt.file.copy('docs/index.html', 'build/index.html');
     grunt.file.copy('docs/markdown.md', 'build/markdown.md');
