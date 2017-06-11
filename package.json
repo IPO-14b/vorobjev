@@ -1,0 +1,29 @@
+{
+  "name": "write-report",
+  "version": "1.0.0",
+  "description": "Simple study documents creator",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IPO-14b/vorobjev.git"
+  },
+  "keywords": [
+    "editor"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "connect-livereload": "*",
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-watch": "*"
+  },
+  "author": "Lev Vorobjev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IPO-14b/vorobjev/issues"
+  },
+  "homepage": "https://github.com/IPO-14b/vorobjev#readme"
+}
