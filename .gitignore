@@ -40,3 +40,4 @@ jspm_packages
 tmp
 build
 dist
+index.js

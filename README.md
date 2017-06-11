@@ -31,7 +31,7 @@ grunt transport
 исходных кодов) выполните:
 
 ```bash
-grunt web
+grunt build
 ```
 
 Все скомпилированные файлы помещаются в каталог build
