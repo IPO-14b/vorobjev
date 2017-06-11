@@ -6,34 +6,34 @@
 <title>Markdown</title>
 <link rel="stylesheet" href="yue.css" />
 <style type="text/css">
-  body {
-    margin: 0;
-    padding: 0.4em 1em 6em;
-    background: #f9f9f7;
-  }
-  .yue {
-    max-width: 650px;
-    *width: 650px;
-    margin: 0 auto;
-  }
-  .entry-title {
-    text-align: center;
-  }
+    body {
+        margin: 0;
+        padding: 0.4em 1em 6em;
+        background: #f9f9f7;
+    }
+    .yue {
+        max-width: 650px;
+        *width: 650px;
+        margin: 0 auto;
+    }
+    .entry-title {
+        text-align: center;
+    }
 </style>
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-21475122-5']);
-  _gaq.push(['_setCustomVar', 1, 'Repo', 'lepture/editor']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    if (location.port !== 80) {
-      return;
-    }
-    ga.src = '//www.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21475122-5']);
+    _gaq.push(['_setCustomVar', 1, 'Repo', 'lepture/editor']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        if (location.port !== 80) {
+            return;
+        }
+        ga.src = '//www.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 </script>
 </head>
 <body>
@@ -50,8 +50,8 @@
 
 <h3>Strong and Emphasize</h3>
 
-<pre><code>*emphasize*    **strong**
-_emphasize_    __strong__
+<pre><code>*emphasize*        **strong**
+_emphasize_        __strong__
 </code></pre>
 
 <p><strong>Shortcuts</strong></p>
@@ -79,7 +79,7 @@ _emphasize_    __strong__
 
 <pre><code>[link text][id]
 
-    [id]: http://url.com "title"
+        [id]: http://url.com "title"
 </code></pre>
 
 <p><strong>Shortcuts</strong></p>
@@ -152,7 +152,7 @@ _emphasize_    __strong__
 <p>You can nest them:</p>
 
 <pre><code>* Abacus
-  * anser
+* anser
 * Bubbles
   1. bunk
   2. bupkis
@@ -181,7 +181,7 @@ _emphasize_    __strong__
 &gt; &gt; And, they can be nested.
 
 &gt; #### Headers in blockquotes
-&gt; 
+&gt;
 &gt; * You can quote a list.
 &gt; * Etc.
 </code></pre>
@@ -221,7 +221,7 @@ like `` `this` ``.
 
 * * *
 
-- - - - 
+- - - -
 </code></pre>
 
 <h3>Manual Line Breaks</h3>
