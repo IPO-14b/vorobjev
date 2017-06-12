@@ -41,9 +41,10 @@ ReportGenerator.prototype.setTemplate = function (template) {
  * Добалвление нового курса в хранилище
  * @param string key Ключ записи
  * @param string name Название курса
+ * @param int curator Преподаватель
  */
-ReportGenerator.prototype.addCourse = function (key, name) {
-    this.courses[key] = name;
+ReportGenerator.prototype.addCourse = function (key, name, curator) {
+    this.courses[key] = { "name": name, "curator": curator };
 };
 
 /**
@@ -62,7 +63,7 @@ ReportGenerator.prototype.getCourses = function () {
  * @param string post Должность (асс. каф. | ст. преп. каф. )
  */
 ReportGenerator.prototype.addCurator = function (name, post) {
-    this.curators.push({"name": name, "post": post});
+    this.curators.push({ "name": name, "post": post });
 };
 
 /**

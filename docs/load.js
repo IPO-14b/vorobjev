@@ -21,7 +21,8 @@
     $('#add-course-start').click(function() {
         var key = $('.add-course-form #key').val();
         var name = $('.add-course-form #name').val();
-        rg.addCourse(key, name);
+        var curator = $('.add-course-form #curator').val();
+        rg.addCourse(key, name, curator);
         $('.add-course-form').hide();
     });
     $('#add-curator').click(function() {
@@ -30,7 +31,7 @@
     $('#add-curator-start').click(function() {
         var name = $('.add-curator-form #name').val();
         var post = $('.add-curator-form #post').val();
-        //rg.addCurator(name, post);
+        rg.addCurator(name, post);
         $('.add-curator-form').hide();
     });
     $.get('template.md', function(data){
