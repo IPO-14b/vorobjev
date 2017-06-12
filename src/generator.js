@@ -22,6 +22,7 @@
 function ReportGenerator(template) {
     this.template = template;
     this.courses = {};
+    this.curators = [];
 }
 
 /**
@@ -51,7 +52,26 @@ ReportGenerator.prototype.addCourse = function (key, name) {
  * @return Список курсов
  */
 ReportGenerator.prototype.getCourses = function () {
-    return courses;
+    return this.courses;
+};
+
+/**
+ * ReportGenerator.addCurator
+ * Добавление нового руководителя в хранилище
+ * @param string name Имя преподавателя
+ * @param string post Должность (асс. каф. | ст. преп. каф. )
+ */
+ReportGenerator.prototype.addCurator = function (name, post) {
+    this.curators.push({"name": name, "post": post});
+};
+
+/**
+ * ReportGenerator.getCurators
+ * Получение списка руководителей
+ * @return Список руководителей
+ */
+ReportGenerator.prototype.getCurators = function () {
+    return this.curators;
 };
 
 /**
