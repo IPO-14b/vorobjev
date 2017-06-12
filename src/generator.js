@@ -23,10 +23,29 @@ function ReportGenerator(template) {
     this.template = template;
 }
 
+/**
+ * ReportGenerator.setTemplate
+ *
+ * Установка шаблона
+ *
+ * @param string template Шаблон
+ */
 ReportGenerator.prototype.setTemplate = function (template) {
     this.template = template;
 };
 
+/**
+ * ReportGenerator.getMarkup
+ *
+ * Генерация разметки
+ *
+ * @param string title Название документа
+ * @param string course Учебный курс
+ * @param string subject Тема работы
+ * @param string author Автор (студент)
+ * @param string curator Преподаватель
+ * @return Текст разметки
+ */
 ReportGenerator.prototype.getMarkup = function (title, course, subject, author, curator) {
     var text = this.template;
     text = text.replace('(@title)', title);
