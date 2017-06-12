@@ -35,7 +35,7 @@
         </style>
     </head>
     <body>
-        <div class="generator-form" hidden="hidden">
+        <div class="generator-form">
             <input type="text" id="title" placeholder="Название документа (Отчет)" /><br/>
             <input type="text" id="course" placeholder="Курс" /><br/>
             <input type="text" id="subject" placeholder="Тема работы" /><br/>
@@ -51,6 +51,7 @@
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
         <script type="text/javascript">
         (function($) {
+            $('.editor-wrapper').hide();
             $('#editor').load('markdown.md',
                 function(data) {
                     var editor = new Editor();
