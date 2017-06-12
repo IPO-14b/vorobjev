@@ -44,7 +44,7 @@ ReportGenerator.prototype.setTemplate = function (template) {
  * @param int curator Преподаватель
  */
 ReportGenerator.prototype.addCourse = function (key, name, curator) {
-    this.courses[key] = { "name": name, "curator": curator };
+    this.courses[key] = { "key": key, "name": name, "curator": curator };
 };
 
 /**
@@ -80,11 +80,9 @@ ReportGenerator.prototype.getCurators = function () {
  *
  * Генерация разметки
  *
- * @param string title Название документа
  * @param string course Учебный курс
  * @param string subject Тема работы
  * @param string author Автор (студент)
- * @param string curator Преподаватель
  * @return Текст разметки
  */
 ReportGenerator.prototype.getMarkup = function (course, subject, author) {

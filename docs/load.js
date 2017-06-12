@@ -12,6 +12,20 @@
 
 (function($) {
     var rg = new ReportGenerator("");
+    function loadCourselist() {
+        $('.generator-form #course').empty();
+        for (var i in rg.getCourses()) {
+            $('.generator-form #course')
+            .append('<option value="' + i.key + '">' + i.name + '</option>');
+        }
+    }
+    function loadCuratorslist() {
+        $('.add-course-form #curator').empty();
+        rg.getCurators().forEach(function(item, i, arr) {
+            $('.add-course-form #curator')
+            .append('<option value="' + i + '">' + item.name + '</option>');
+        });
+    }
     $('.add-course-form').hide();
     $('.add-curator-form').hide();
     $('.editor-wrapper').hide();
@@ -21,9 +35,10 @@
     $('#add-course-start').click(function() {
         var key = $('.add-course-form #key').val();
         var name = $('.add-course-form #name').val();
-        var curator = $('.add-course-form #curator option:selected').val();
+        //var curator = $('.add-course-form #curator :selected').val();
         rg.addCourse(key, name, curator);
         $('.add-course-form').hide();
+        loadCourselist();
     });
     $('#add-curator').click(function() {
         $('.add-curator-form').show();
@@ -33,6 +48,7 @@
         var post = $('.add-curator-form #post').val();
         rg.addCurator(name, post);
         $('.add-curator-form').hide();
+        loadCuratorslist();
     });
     $.get('template.md', function(data){
         rg.setTemplate(data);
