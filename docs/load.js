@@ -35,7 +35,7 @@
     $('#add-course-start').click(function() {
         var key = $('.add-course-form #key').val();
         var name = $('.add-course-form #name').val();
-        //var curator = $('.add-course-form #curator :selected').val();
+        var curator = $('.add-course-form #curator').val();
         rg.addCourse(key, name, curator);
         $('.add-course-form').hide();
         loadCourselist();
@@ -54,7 +54,7 @@
         rg.setTemplate(data);
     });
     $('#editor-start').click(function() {
-        var course = $('.generator-form #course option:selected').val();
+        var course = $('.generator-form #course').val();
         var subject = $('.generator-form #subject').val();
         var author = $('.generator-form #author').val();
         var markup = rg.getMarkup(course, subject, author);
