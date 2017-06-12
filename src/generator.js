@@ -99,6 +99,7 @@ ReportGenerator.prototype.getMarkup = function (course, subject, author) {
     text = text.replace('(@subject)', subject);
     text = text.replace('(@author)', author);
     text = text.replace('(@curator)', curator);
+    text = text.replace('(@curator_post)', curator_post);
     text = text.replace('(@year)', new Date().getFullYear());
     return text;
 };
