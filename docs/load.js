@@ -10,18 +10,24 @@
  */
 
 
-
- (function($) {
-     $('.generator-form').hide();
-     var rg = new ReportGenerator("");
-     $.get('template.md', function(data){
-         rg.setTemplate(data);
-         alert( "Load was performed." );
-     });
-     $('#editor').load('markdown.md',
-         function(data) {
-             var editor = new Editor();
-             editor.render();
-         }
-     );
- })(Zepto);
+(function($) {
+    $('.editor-wrapper').hide();
+    var rg = new ReportGenerator("");
+    $.get('template.md', function(data){
+        rg.setTemplate(data);
+    });
+    $('#editor-start').click(function() {
+        var title = $('.generator-form #title').val();
+        var course = $('.generator-form #course').val();
+        var subject = $('.generator-form #subject').val();
+        var author = $('.generator-form #author').val();
+        var curator = $('.generator-form #curator').val();
+        //var markup = rg.getMarkup(title, course, subject, author, curator);
+            alert("clicked ");
+        $('#editor').html("1235");
+        $('.generator-form').hide();
+        var editor = new Editor();
+        editor.render();
+        $('.editor-wrapper').show();
+    });
+})(Zepto);
