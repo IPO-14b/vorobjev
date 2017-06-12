@@ -27,6 +27,9 @@
             .append('<option value="' + i + '">' + item.name + '</option>');
         });
     }
+    rg.loadStorage();
+    loadCourselist();
+    loadCuratorslist();
     $('.add-course-form').hide();
     $('.add-curator-form').hide();
     $('.editor-wrapper').hide();

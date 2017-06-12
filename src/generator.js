@@ -37,6 +37,40 @@ ReportGenerator.prototype.setTemplate = function (template) {
 };
 
 /**
+ * ReportGenerator.loadStorage
+ *
+ * Загрузка данных из LocalStorage
+ *
+ */
+ReportGenerator.prototype.loadStorage = function () {
+    var jsonCourses = localStorage.getItem('courses') || undefined;
+    var jsonCurators = localStorage.getItem('curators') || undefined;
+    if(! jsonCourses ){
+        this.courses = {};
+    } else {
+        this.courses = JSON.parse(jsonCourses);
+    }
+    if(! jsonCurators ){
+        this.curators = [];
+    } else {
+        this.curators = JSON.parse(jsonCurators);
+    }
+};
+
+/**
+ * ReportGenerator.saveStorage
+ *
+ * Выгрузка данных в LocalStorage
+ *
+ */
+ReportGenerator.prototype.saveStorage = function () {
+    var jsonCourses = JSON.stringify(this.courses);
+    var jsonCurators = JSON.stringify(this.curators);
+    localStorage.setItem('courses', jsonCourses);
+    localStorage.setItem('curators', jsonCurators);
+};
+
+/**
  * ReportGenerator.addCourse
  * Добалвление нового курса в хранилище
  * @param string key Ключ записи
