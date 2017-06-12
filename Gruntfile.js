@@ -78,6 +78,8 @@ module.exports = function(grunt) {
         grunt.file.copy('docs/markdown.html', 'build/markdown.html');
         grunt.file.copy('docs/yue.css', 'build/yue.css');
         grunt.file.copy('docs/marked.js', 'build/marked.js');
+        grunt.file.copy('src/generator.js', 'build/generator.js');
+        grunt.file.copy('docs/template.md', 'build/template.md');
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');

@@ -11,10 +11,13 @@
  * @Last modified time: June 12, 2017
  */
 
-'use strict';
-
 /**
  * ReportGenerator
+ *
+ * Генератор отчетов по шаблону
+ *
+ * @author Lev Vorobjev
+ * @param string template Шаблон
  */
 function ReportGenerator(template) {
     this.template = template;
@@ -34,3 +37,5 @@ ReportGenerator.prototype.getMarkup = function (title, course, subject, author, 
     text = text.replace('(@year)', getFullYear(new Date()));
     return text;
 };
+
+module.exports = ReportGenerator;

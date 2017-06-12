@@ -19,6 +19,7 @@
         </script>
         <script type="text/javascript" src="marked.js"></script>
         <script type="text/javascript" src="editor.js"></script>
+        <script type="text/javascript" src="generator.js"></script>
         <link rel="stylesheet" href="editor.css" />
         <title>Write report tool</title>
         <style type="text/css">
@@ -51,6 +52,11 @@
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
         <script type="text/javascript">
         (function($) {
+            var rg = new ReportGenerator("");
+            $.get('template.md', function(data){
+                rg.setTemplate(data);
+                alert( "Load was performed." );
+            });
             $('#editor').load('markdown.md',
                 function(data) {
                     var editor = new Editor();
