@@ -87,8 +87,13 @@ ReportGenerator.prototype.getCurators = function () {
  * @param string curator Преподаватель
  * @return Текст разметки
  */
-ReportGenerator.prototype.getMarkup = function (title, course, subject, author, curator) {
+ReportGenerator.prototype.getMarkup = function (course, subject, author) {
     var text = this.template;
+    var title = "Отчет";
+    var course_name = this.courses[course].name;
+    var curator = this.courses[course].curator;
+    var curator_name = this.curators[curator].name;
+    var curator_post = this.curators[curator].post;
     text = text.replace('(@title)', title);
     text = text.replace('(@course)', course);
     text = text.replace('(@subject)', subject);

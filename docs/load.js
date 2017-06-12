@@ -21,7 +21,7 @@
     $('#add-course-start').click(function() {
         var key = $('.add-course-form #key').val();
         var name = $('.add-course-form #name').val();
-        var curator = $('.add-course-form #curator').val();
+        var curator = $('.add-course-form #curator option:selected').val();
         rg.addCourse(key, name, curator);
         $('.add-course-form').hide();
     });
@@ -38,12 +38,10 @@
         rg.setTemplate(data);
     });
     $('#editor-start').click(function() {
-        var title = $('.generator-form #title').val();
-        var course = $('.generator-form #course').val();
+        var course = $('.generator-form #course option:selected').val();
         var subject = $('.generator-form #subject').val();
         var author = $('.generator-form #author').val();
-        var curator = $('.generator-form #curator').val();
-        var markup = rg.getMarkup(title, course, subject, author, curator);
+        var markup = rg.getMarkup(course, subject, author);
         $('#editor').html(markup);
         $('.generator-form').hide();
         var editor = new Editor();
