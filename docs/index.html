@@ -11,8 +11,14 @@
     </head>
     <body>
         <div class="generator-form">
-            <input type="text" id="title" placeholder="Название документа (Отчет)" /><br/>
-            <input type="text" id="course" placeholder="Курс" /><br/>
+            <input type="text" id="title" value="Отчет" /><br/>
+            <input type="text" id="course" placeholder="Курс" />
+            <input type="button" id="add-course" value="Добавить курс"/><br/>
+            <div class="add-course-form">
+                <input type="text" id="key" placeholder="Ключ курса"/><br/>
+                <input type="text" id="name" placeholder="Название курса"/><br/>
+                <input type="submit" id="add-course-start" value="Добавить"/>
+            </div>
             <input type="text" id="subject" placeholder="Тема работы" /><br/>
             <input type="text" id="author" placeholder="Автор" /><br/>
             <input type="text" id="curator" placeholder="Руководитель" /><br/>

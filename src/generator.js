@@ -38,9 +38,20 @@ ReportGenerator.prototype.setTemplate = function (template) {
 /**
  * ReportGenerator.addCourse
  * Добалвление нового курса в хранилище
+ * @param string key Ключ записи
+ * @param string name Название курса
  */
 ReportGenerator.prototype.addCourse = function (key, name) {
-    courses[key] = name;
+    this.courses[key] = name;
+};
+
+/**
+ * ReportGenerator.getCourses
+ * Получение списка курсов
+ * @return Список курсов
+ */
+ReportGenerator.prototype.getCourses = function () {
+    return courses;
 };
 
 /**

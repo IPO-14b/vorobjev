@@ -11,8 +11,18 @@
 
 
 (function($) {
-    $('.editor-wrapper').hide();
     var rg = new ReportGenerator("");
+    $('.add-course-form').hide();
+    $('.editor-wrapper').hide();
+    $('#add-course').click(function() {
+        $('.add-course-form').show();
+    });
+    $('#add-course-start').click(function() {
+        var key = $('.add-course-form #key').val();
+        var name = $('.add-course-form #name').val();
+        rg.addCourse(key, name);
+        $('.add-course-form').hide();
+    });
     $.get('template.md', function(data){
         rg.setTemplate(data);
     });
