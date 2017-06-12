@@ -14,9 +14,10 @@
     var rg = new ReportGenerator("");
     function loadCourselist() {
         $('.generator-form #course').empty();
-        for (var i in rg.getCourses()) {
+        var courses = rg.getCourses();
+        for (var i in courses) {
             $('.generator-form #course')
-            .append('<option value="' + i.key + '">' + i.name + '</option>');
+            .append('<option value="' + i + '">' + courses[i].name + '</option>');
         }
     }
     function loadCuratorslist() {
@@ -36,6 +37,7 @@
         var key = $('.add-course-form #key').val();
         var name = $('.add-course-form #name').val();
         var curator = $('.add-course-form #curator').val();
+        alert(curator);
         rg.addCourse(key, name, curator);
         $('.add-course-form').hide();
         loadCourselist();
