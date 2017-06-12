@@ -76,6 +76,7 @@ module.exports = function(grunt) {
         grunt.file.copy('docs/index.html', 'build/index.html');
         grunt.file.copy('docs/markdown.md', 'build/markdown.md');
         grunt.file.copy('docs/markdown.html', 'build/markdown.html');
+        grunt.file.copy('docs/style.css', 'build/style.css');
         grunt.file.copy('docs/yue.css', 'build/yue.css');
         grunt.file.copy('docs/marked.js', 'build/marked.js');
     });
