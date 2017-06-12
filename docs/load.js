@@ -22,9 +22,8 @@
         var subject = $('.generator-form #subject').val();
         var author = $('.generator-form #author').val();
         var curator = $('.generator-form #curator').val();
-        //var markup = rg.getMarkup(title, course, subject, author, curator);
-            alert("clicked ");
-        $('#editor').html("1235");
+        var markup = rg.getMarkup(title, course, subject, author, curator);
+        $('#editor').html(markup);
         $('.generator-form').hide();
         var editor = new Editor();
         editor.render();
