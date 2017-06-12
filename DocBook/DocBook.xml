@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <!--
 @Author: Lev Vorobjev <lev>
 @Date:   June 12, 2017
@@ -6,11 +8,6 @@
 @Last modified by:   lev
 @Last modified time: June 13, 2017
 -->
-
-
-
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <book xmlns="http://docbook.org/ns/docbook" version="5.0">
     <info>
         <title>WriteReport - Документация</title>
