@@ -20,7 +20,7 @@
         <script type="text/javascript" src="marked.js"></script>
         <script type="text/javascript" src="editor.js"></script>
         <link rel="stylesheet" href="editor.css" />
-        <title>Editor</title>
+        <title>Write report tool</title>
         <style type="text/css">
             body {
                 padding: 0;
@@ -35,6 +35,14 @@
         </style>
     </head>
     <body>
+        <div class="generator-form" hidden="hidden">
+            <input type="text" id="title" placeholder="Название документа (Отчет)" /><br/>
+            <input type="text" id="cource" placeholder="Курс" /><br/>
+            <input type="text" id="subject" placeholder="Тема работы" /><br/>
+            <input type="text" id="author" placeholder="Автор" /><br/>
+            <input type="text" id="curator" placeholder="Руководитель" /><br/>
+            <input type="submit" id="editor-start" value="Создать"/>
+        </div>
         <div class="editor-wrapper">
             <input class="title" type="text" placeholder="Title" />
             <textarea id="editor" placeholder="Content here ...."></textarea>
