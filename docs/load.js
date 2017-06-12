@@ -13,6 +13,7 @@
 (function($) {
     var rg = new ReportGenerator("");
     $('.add-course-form').hide();
+    $('.add-curator-form').hide();
     $('.editor-wrapper').hide();
     $('#add-course').click(function() {
         $('.add-course-form').show();
@@ -22,6 +23,15 @@
         var name = $('.add-course-form #name').val();
         rg.addCourse(key, name);
         $('.add-course-form').hide();
+    });
+    $('#add-curator').click(function() {
+        $('.add-curator-form').show();
+    });
+    $('#add-curator-start').click(function() {
+        var name = $('.add-curator-form #name').val();
+        var post = $('.add-curator-form #post').val();
+        //rg.addCurator(name, post);
+        $('.add-curator-form').hide();
     });
     $.get('template.md', function(data){
         rg.setTemplate(data);
