@@ -1,0 +1,121 @@
+<!--
+@Author: Lev Vorobjev <lev>
+@Date:   June 12, 2017
+@Email:  lev.vorobjev@rambler.ru
+@Filename: DocBook.xml
+@Last modified by:   lev
+@Last modified time: June 12, 2017
+-->
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <info>
+        <title>WriteReport - Документация</title>
+        <author>
+            <personname>
+                <firstname>Лев</firstname>
+                <surname>Воробьев</surname>
+            </personname>
+        </author>
+    </info>
+    <abstract>
+        <para>Данный документ предназначен для использования разработчиками программного обеспечения. Документ содержит общие сведения о программном продукте, технические характеристики: структуру, описание компонентов, примеры использования определнных в проекте публичных интерфейсов.</para>
+        <para>Проект доступен по адресу <ulink url="https://www.write-report.tk/">www.write-report.tk</ulink></para>
+    </abstract>
+
+    <chapter>
+        <title>Описание программного продукта</title>
+        <para>Проект write-report предназначен для упрощения создания учебных документов (отчетов, курсовых) средних и высших учебных учереждений.</para>
+
+        <para>Редактирование документов производится с использованием компонента Editor. Генерация документов производится с использвоанием компонентов Editor.</para>
+
+        <para>Приложение реализует графический интерфейс, который предоставляет следующие возможности пользователю:</para>
+        <itemizedlist>
+            <listitem>
+                <para>генерация титульного листа по названию курса и номеру работы;</para>
+            </listitem>
+            <listitem>
+                <para>добаление разделов в отчет;</para>
+            </listitem>
+            <listitem>
+                <para>для каждого занятия выбрать количество чередующихся вариантов занятий: одинаковое занятие каждую неделю, два чередующегося варианта занятия или четыре варианта занятия;</para>
+            </listitem>
+            <listitem>
+                <para>верстка страниц (вставка изображений, таблиц, формул, листингов программного кода);</para>
+            </listitem>
+            <listitem>
+                <para>автоматическая нумерация рисунков, таблиц, формул, листингов;</para>
+            </listitem>
+            <listitem>
+                <para>экспорт отчета в DOC и PDF форматы.</para>
+            </listitem>
+        </itemizedlist>
+    </chapter>
+
+    <chapter>
+        <title>Внешние зависимости</title>
+        <section>
+            <title>npm</title>
+            <para>Для управления зависимостями проекта используется пакетный менеджер npm.</para>
+            <para>Все зависимости указаны в файле <code>package.json</code>. Для установки всех зависимостей необходимо выполнить:</para>
+            <programlisting>
+                <![CDATA[npm install]]>
+            </programlisting>
+        </section>
+        <section>
+            <title>Grunt</title>
+            <para>Для построения проекта в форму, доступную для использования в production используется система автоматизированной сборки Grunt. Конфигурация Grunt содержится в файле <code>Gruntfile.js</code></para>
+            <para>Файлы, сформированные в результате сборки помещаются в директорию <code>build</code>.</para>
+            <para>В проекте определены 6 задач:</para>
+            <section>
+                <title>transport</title>
+                <para>Создает файл <code>index.js</code> для использования в качестве модуля.</para>
+            </section>
+            <section>
+                <title>concat</title>
+                <para>Объединение исходных файлов JS в tmp/editor.js.</para>
+            </section>
+            <section>
+                <title>copy</title>
+                <para>Копирует файлы из директорий <code>tmp</code> и <code>doc</code> в директорию <code>build</code></para>
+            </section>
+        </section>
+        <section>
+            <title>Зависимости этапа компиляции</title>
+            <itemizedlist>
+                <listitem><para><emphasis>grunt-contrib-connect</emphasis>: используется для генерации серверных скриптов</para></listitem>
+                <listitem><para><emphasis>grunt-contrib-watch</emphasis>: используется для отслеживания изменений файлов</para></listitem>
+            </itemizedlist>
+        </section>
+    </chapter>
+
+    <chapter>
+        <title>Структура приложения</title>
+        <para>Центральным объектом является <code>CodeMirror</code>, который отвечает за отбражение разметки документа в форме исходного кода и в виде WYSIWYG.</para>
+        <para>За генерацию документов отвечает компонент <code>ReportGenerator</code></para>
+        <para>За редактирование документов отвечает компонент <code>Editor</code></para>
+    </chapter>
+
+    <chapter>
+        <title>Примеры использования публичного интерфейса модулей системы</title>
+        <example>
+            <title>Генерация документа</title>
+            <para>В приведенном ниже коде представлен пример генрации документа по шаблону.</para>
+            <programlisting><![CDATA[
+                var course = $('.generator-form #course option:selected').val();
+                var subject = $('.generator-form #subject').val();
+                var author = $('.generator-form #author').val();
+                var markup = rg.getMarkup(course, subject, author);
+                $('#editor').html(markup);
+                $('.generator-form').hide();
+                var editor = new Editor();
+                editor.render();
+                $('.editor-wrapper').show();
+            ]]></programlisting>
+        </example>
+    </chapter>
+
+</book>
