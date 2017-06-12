@@ -23,16 +23,6 @@
         </div>
         <!-- only required for loading sample markdown into the textarea -->
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
-        <script type="text/javascript">
-        (function($) {
-            $('.editor-wrapper').hide();
-            $('#editor').load('markdown.md',
-                function(data) {
-                    var editor = new Editor();
-                    editor.render();
-                }
-            );
-        })(Zepto);
-        </script>
+        <script type="text/javascript" src="load.js"></script>
     </body>
 </html>
