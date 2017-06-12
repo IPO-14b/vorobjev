@@ -41,6 +41,7 @@
         loadCourselist();
         loadCuratorslist();
     }
+    loadLocalStorage();
     $('.add-course-form').hide();
     $('.add-curator-form').hide();
     $('.editor-wrapper').hide();
