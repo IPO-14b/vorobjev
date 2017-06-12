@@ -43,8 +43,8 @@ ReportGenerator.prototype.setTemplate = function (template) {
  *
  */
 ReportGenerator.prototype.loadStorage = function () {
-    var jsonCourses = localStorage.getItem('courses') || undefined;
-    var jsonCurators = localStorage.getItem('curators') || undefined;
+    var jsonCourses = localStorage.getItem('courses');
+    var jsonCurators = localStorage.getItem('curators');
     if(! jsonCourses ){
         this.courses = {};
     } else {

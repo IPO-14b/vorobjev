@@ -27,9 +27,11 @@
             .append('<option value="' + i + '">' + item.name + '</option>');
         });
     }
-    rg.loadStorage();
-    loadCourselist();
-    loadCuratorslist();
+    function loadLocalStorage() {
+        rg.loadStorage();
+        loadCourselist();
+        loadCuratorslist();
+    }
     $('.add-course-form').hide();
     $('.add-curator-form').hide();
     $('.editor-wrapper').hide();
@@ -40,9 +42,9 @@
         var key = $('.add-course-form #key').val();
         var name = $('.add-course-form #name').val();
         var curator = $('.add-course-form #curator').val();
-        alert(curator);
         rg.addCourse(key, name, curator);
         $('.add-course-form').hide();
+        rg.saveStorage();
         loadCourselist();
     });
     $('#add-curator').click(function() {
@@ -53,6 +55,7 @@
         var post = $('.add-curator-form #post').val();
         rg.addCurator(name, post);
         $('.add-curator-form').hide();
+        rg.saveStorage();
         loadCuratorslist();
     });
     $.get('template.md', function(data){
