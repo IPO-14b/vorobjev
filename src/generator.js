@@ -21,6 +21,7 @@
  */
 function ReportGenerator(template) {
     this.template = template;
+    this.courses = {};
 }
 
 /**
@@ -32,6 +33,14 @@ function ReportGenerator(template) {
  */
 ReportGenerator.prototype.setTemplate = function (template) {
     this.template = template;
+};
+
+/**
+ * ReportGenerator.addCourse
+ * Добалвление нового курса в хранилище
+ */
+ReportGenerator.prototype.addCourse = function (key, name) {
+    courses[key] = name;
 };
 
 /**
