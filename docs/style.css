@@ -9,13 +9,18 @@
  * @Last modified time: June 12, 2017
  */
 
- body {
-     padding: 0;
-     margin: 0;
-     background-color: #f9f9f7;
- }
- .editor-wrapper {
-     max-width: 680px;
-     padding: 10px;
-     margin: 60px auto;
- }
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f7;
+}
+.editor-wrapper {
+    max-width: 680px;
+    padding: 10px;
+    margin: 60px auto;
+}
+.generator-form {
+    max-width: 680px;
+    padding: 10px;
+    margin: 60px auto;
+}
