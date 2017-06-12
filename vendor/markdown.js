@@ -55,28 +55,28 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
     var codeDepth = 0;
 
     var header     = 'header'
-    ,     code         = 'comment'
-    ,     quote1     = 'atom'
-    ,     quote2     = 'number'
-    ,     list1        = 'variable-2'
-    ,     list2        = 'variable-3'
-    ,     list3        = 'keyword'
-    ,     hr             = 'hr'
-    ,     image        = 'tag'
-    ,     linkinline = 'link'
-    ,     linkemail = 'link'
-    ,     linktext = 'link'
-    ,     linkhref = 'string'
-    ,     em             = 'em'
-    ,     strong     = 'strong'
-    ,     strike     = 'strike';
+    ,   code       = 'comment'
+    ,   quote1     = 'atom'
+    ,   quote2     = 'number'
+    ,   list1      = 'variable-2'
+    ,   list2      = 'variable-3'
+    ,   list3      = 'keyword'
+    ,   hr         = 'hr'
+    ,   image      = 'tag'
+    ,   linkinline = 'link'
+    ,   linkemail  = 'link'
+    ,   linktext   = 'link'
+    ,   linkhref   = 'string'
+    ,   em         = 'em'
+    ,   strong     = 'strong'
+    ,   strike     = 'strike';
 
     var hrRE = /^([*\-=_])(?:\s*\1){4,}\s*$/
-    ,     ulRE = /^[*\-+]\s+/
-    ,     olRE = /^[0-9]+\.\s+/
-    ,     taskListRE = /^\[(x| )\](?=\s)/ // Must follow ulRE or olRE
-    ,     headerRE = /^(?:\={1,}|-{1,})$/
-    ,     textRE = /^[^!\[\]*_~\\<>` "'(]+/;
+    ,   ulRE = /^[*\-+]\s+/
+    ,   olRE = /^[0-9]+\.\s+/
+    ,   taskListRE = /^\[(x| )\](?=\s)/ // Must follow ulRE or olRE
+    ,   headerRE = /^(?:\={1,}|-{1,})$/
+    ,   textRE = /^[^!\[\]*_~\\<>` "'(]+/;
 
     function switchInline(stream, state, f) {
         state.f = state.inline = f;
