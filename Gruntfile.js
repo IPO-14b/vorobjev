@@ -74,7 +74,6 @@ module.exports = function(grunt) {
         data += grunt.file.read('less/editor.css');
         grunt.file.write('build/editor.css', data);
         grunt.file.copy('docs/index.html', 'build/index.html');
-        grunt.file.copy('docs/markdown.md', 'build/markdown.md');
         grunt.file.copy('docs/style.css', 'build/style.css');
         grunt.file.copy('docs/load.js', 'build/load.js');
         grunt.file.copy('docs/yue.css', 'build/yue.css');
