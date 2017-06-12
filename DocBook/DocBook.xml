@@ -4,7 +4,7 @@
 @Email:  lev.vorobjev@rambler.ru
 @Filename: DocBook.xml
 @Last modified by:   lev
-@Last modified time: June 12, 2017
+@Last modified time: June 13, 2017
 -->
 
 
@@ -114,6 +114,38 @@
                 var editor = new Editor();
                 editor.render();
                 $('.editor-wrapper').show();
+            ]]></programlisting>
+        </example>
+
+        <example>
+            <title>Запуск редактора кода</title>
+            <para>В приведенном ниже коде представлен пример редакритования заданного файла.</para>
+            <programlisting><![CDATA[
+    (function($) {
+      $('#editor').load('markdown.md',
+        function(data) {
+          var editor = new Editor();
+          editor.render();
+        }
+      );
+    })(Zepto);
+            ]]></programlisting>
+        </example>
+
+        <example>
+            <title>Добавление курсов и предодавателей</title>
+            <para>В приведенном ниже коде представлен пример добавления курсов и преподавателей.</para>
+            <programlisting><![CDATA[
+                var rg = new ReportGenerator("");
+                rg.loadStorage();
+                var name = $('.add-curator-form #name').val();
+                var post = $('.add-curator-form #post').val();
+                rg.addCurator(name, post);
+                var key = $('.add-course-form #key').val();
+                var name = $('.add-course-form #name').val();
+                var curator = $('.add-course-form #curator').val();
+                rg.addCourse(key, name, curator);
+                rg.saveStorage();
             ]]></programlisting>
         </example>
     </chapter>

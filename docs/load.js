@@ -6,12 +6,15 @@
  *      Email: lev.vorobjev@rambler.ru
  *
  * @Last modified by:   lev
- * @Last modified time: June 12, 2017
+ * @Last modified time: June 13, 2017
  */
 
 
 (function($) {
     var rg = new ReportGenerator("");
+    /**
+     * Загрузка списка курсов в selectbox
+     */
     function loadCourselist() {
         $('.generator-form #course').empty();
         var courses = rg.getCourses();
@@ -20,6 +23,9 @@
             .append('<option value="' + i + '">' + courses[i].name + '</option>');
         }
     }
+    /**
+     * Загрузка списка преподавателей в selectbox
+     */
     function loadCuratorslist() {
         $('.add-course-form #curator').empty();
         rg.getCurators().forEach(function(item, i, arr) {
@@ -27,6 +33,9 @@
             .append('<option value="' + i + '">' + item.name + '</option>');
         });
     }
+    /**
+     * Загрузка списка курсов и преподавателей из localStorage
+     */
     function loadLocalStorage() {
         rg.loadStorage();
         loadCourselist();
