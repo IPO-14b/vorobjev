@@ -56,12 +56,12 @@ var CodeMirror = (function() {
         if (options.autofocus && !mobile) focusInput(this);
 
         this.state = {keyMaps: [],
-                                    overlays: [],
-                                    modeGen: 0,
-                                    overwrite: false, focused: false,
-                                    suppressEdits: false, pasteIncoming: false,
-                                    draggingText: false,
-                                    highlight: new Delayed()};
+                      overlays: [],
+                      modeGen: 0,
+                      overwrite: false, focused: false,
+                      suppressEdits: false, pasteIncoming: false,
+                      draggingText: false,
+                      highlight: new Delayed()};
 
         themeChanged(this);
         if (options.lineWrapping)
