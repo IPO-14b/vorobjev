@@ -12,6 +12,7 @@
 
 
  (function($) {
+     $('#generator-form').hide();
      var rg = new ReportGenerator("");
      $.get('template.md', function(data){
          rg.setTemplate(data);
