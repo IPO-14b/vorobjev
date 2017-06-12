@@ -23,10 +23,13 @@
         var author = $('.generator-form #author').val();
         var curator = $('.generator-form #curator').val();
         var markup = rg.getMarkup(title, course, subject, author, curator);
-        $('#editor').html(markup);
-        $('.generator-form').hide();
-        var editor = new Editor();
-        editor.render();
-        $('.editor-wrapper').show();
+        $('#editor').ready(function() {
+            var editor = new Editor();
+            editor.render();
+            $('#editor').html(markup);
+            $('.generator-form').hide();
+            $('.editor-wrapper').show();
+        });
+        alert("done");
     });
 })(Zepto);
