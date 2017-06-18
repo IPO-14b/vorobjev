@@ -16,6 +16,7 @@
  *
  * Генератор отчетов по шаблону
  *
+ * @constructor
  * @author Lev Vorobjev
  * @param string template Шаблон
  */
