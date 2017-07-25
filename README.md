@@ -8,6 +8,8 @@
 * Автоматическая нумерация рисунков, таблиц, формул, листингов
 * Экспорт отчета в DOC и PDF форматы
 
+[UML](https://drive.google.com/file/d/0BznTR_PhCDnWcXB5TGgzcENCU0E/view?usp=sharing)
+
 ## Доступ к сервису ##
 Рабочая версия редактора отчетов будет доступна конечному пользователю через сайт [www.write-report.tk](https://www.write-report.tk/)
 
